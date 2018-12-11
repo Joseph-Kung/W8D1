@@ -7,6 +7,7 @@ import Root from './components/root';
 // TEST
 import { login, logout, signup } from './util/session_api_util';
 import { loginUser, logoutUser, signupUser } from './actions/session_actions';
+import { fetchBenches } from './actions/bench_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchBenches = fetchBenches;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
