@@ -7,8 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Bench seeds
-Bench.create!(description: 'Nice bench', lat: 37.7596, lng: 122.4269)
-Bench.create!(description: 'Cool bench', lat: 37.8080, lng: 122.4177)
-Bench.create!(description: 'Sick bench', lat: 37.7525, lng: 122.4476)
-Bench.create!(description: 'Naicee bench', lat: 37.7786, lng: 122.3893)
-Bench.create!(description: 'Ferry bench', lat: 37.7956, lng: 122.3933)
+Bench.delete_all
+User.delete_all
+
+Bench.create!(
+  description: 'alamo square, many dogs',
+  lat: 37.775769,
+  lng: -122.434960,
+)
+
+Bench.create!(
+  description: 'UN plaza, food truck access',
+  lat: 37.779760,
+  lng: -122.413820,
+)
+
+Bench.create!(
+  description: 'Ocean Beach, gnarly breh',
+  lat: 37.769996,
+  lng: -122.511281,
+)
+
+User.create!(
+  username: 'guest',
+  password: 'password'
+)
