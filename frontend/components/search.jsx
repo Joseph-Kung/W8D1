@@ -6,7 +6,7 @@ const Search = (props) => {
   console.log(props);
   return (
     <div>
-      <BenchMap />
+      <BenchMap benches={props.benches} />
       <BenchIndex benches={props.benches} fetchBenches={props.fetchBenches} />
     </div>
   );
